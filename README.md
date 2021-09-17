@@ -2,6 +2,11 @@
 
 This package contains utilities to encode and decode ArrayBuffer objects to **base64** and **hex** with full support for Unicode and binary data. It's especially designed for usage in web browsers, but it works on Node.js too.
 
+- Encode and decode ArrayBuffer objects (and typed arrays like Uint8Array, and strings) to base64 and hex, for the browser and Node.js
+- Supports base64 "standard" and "URL-safe" encodings, with optional padding; custom base64 encodings can be defined as well
+- Clean, well-documented APIs
+- Reasonable performance
+
 ## Installation
 
 Install from NPM:
