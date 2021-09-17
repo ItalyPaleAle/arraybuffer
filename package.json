@@ -1,11 +1,17 @@
 {
   "name": "arraybuffer-encoding",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ArrayBuffer to base64 and hex encoding/decoding utilities",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "directories": {
     "test": "test"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./hex": "./dist/hex.js",
+    "./base64": "./dist/base64/index.js",
+    "./base64/*": "./dist/base64/*.js"
   },
   "scripts": {
     "build": "npm run tsc",
