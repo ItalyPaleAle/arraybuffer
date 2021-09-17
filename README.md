@@ -1,3 +1,5 @@
+![License: MIT](https://img.shields.io/github/license/ItalyPaleAle/arraybuffer)
+
 # ArrayBuffer encoding and decoding tools
 
 This package contains utilities to encode and decode ArrayBuffer objects to **base64** and **hex** with full support for Unicode and binary data. It's especially designed for usage in web browsers, but it works on Node.js too.

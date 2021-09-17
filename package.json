@@ -1,6 +1,6 @@
 {
   "name": "@italypaleale/arraybuffer",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "ArrayBuffer to base64 and hex encoding/decoding utilities",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
