@@ -1,0 +1,12 @@
+.travis.yml
+.eslintignore
+.eslintrc.yml
+.vscode
+docs
+test
+coverage
+.nyc_output
+src
+tsconfig.json
+tslint.json
+.jsdoc.json

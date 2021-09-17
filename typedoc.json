@@ -1,0 +1,6 @@
+{
+    "name": "@italypaleale/arraybuffer-encode",
+    "readme": "README.md",
+    "out": "docs",
+    "entryPoints": ["src/index.ts"]
+}

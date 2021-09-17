@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "target": "es2018",
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "outDir": "./dist",
+        "listFiles": false,
+        "sourceMap": false,
+        "declaration": true,
+        "lib": [
+            "ES2018",
+            "DOM"
+        ],
+        "strict": true,
+        "noImplicitAny": true
+    },
+    "include": [
+        "src/*"
+    ],
+    "exclude": [
+        "**/node_modules",
+        "**/.git"
+    ]
+}

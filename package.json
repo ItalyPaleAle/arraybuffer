@@ -1,0 +1,46 @@
+{
+  "name": "@italypaleale/arraybuffer-encode",
+  "version": "1.0.0",
+  "description": "Encode ArrayBuffer to base64 and hex in the browser",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "npm run tsc",
+    "docs": "npm run typedoc",
+    "tsc": "tsc",
+    "test": "nyc npm run test-nocov",
+    "test-nocov": "mocha -r ts-node/register test/**/*.test.ts",
+    "lint": "npm run tslint",
+    "tslint": "tslint -p tsconfig.json",
+    "typedoc": "typedoc --options typedoc.json --tsconfig tsconfig.json && touch docs/.nojekyll",
+    "prepublishOnly": "npm run tslint && npm run build && npm run test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.0.0",
+    "coveralls": "^3.1.1",
+    "mocha": "^9.1.1",
+    "nyc": "^15.1.0",
+    "should": "^13.2.3",
+    "source-map-support": "^0.5.20",
+    "ts-node": "^10.2.1",
+    "tslint": "^6.1.3",
+    "typedoc": "^0.22.3",
+    "typescript": "^4.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItalyPaleAle/arraybuffer-encode.git"
+  },
+  "keywords": [
+    "arraybuffer"
+  ],
+  "author": "Alessandro Segala (@ItalyPaleAle)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ItalyPaleAle/arraybuffer-encode/issues"
+  },
+  "homepage": "https://github.com/ItalyPaleAle/arraybuffer-encode#readme"
+}
