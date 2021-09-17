@@ -9,6 +9,8 @@ This package contains utilities to encode and decode ArrayBuffer objects to **ba
 - Clean, well-documented APIs
 - Reasonable performance
 
+Full API documentation available at [https://italypaleale.github.io/arraybuffer/](https://italypaleale.github.io/arraybuffer/)
+
 ## Installation
 
 Install from NPM:
