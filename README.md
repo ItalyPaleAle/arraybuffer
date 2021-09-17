@@ -1,4 +1,4 @@
-![License: MIT](https://img.shields.io/github/license/ItalyPaleAle/arraybuffer)
+![npm](https://img.shields.io/npm/v/arraybuffer-encoding) [![Node.js CI](https://github.com/ItalyPaleAle/arraybuffer/actions/workflows/node.js.yaml/badge.svg)](https://github.com/ItalyPaleAle/arraybuffer/actions/workflows/node.js.yaml) ![License: MIT](https://img.shields.io/github/license/ItalyPaleAle/arraybuffer)
 
 # ArrayBuffer encoding and decoding tools
 
