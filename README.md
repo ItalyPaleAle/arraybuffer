@@ -14,7 +14,7 @@ This package contains utilities to encode and decode ArrayBuffer objects to **ba
 Install from NPM:
 
 ```sh
-npm i @italypaleale/arraybuffer
+npm i arraybuffer-encoding
 ```
 
 ## Base64
@@ -25,16 +25,16 @@ This package offers support for encoding and decoding base64 in two variants:
   Import with:  
 
   ```js
-  import {Encode, Decode} from '@italypaleale/arraybuffer/base64/standard'
+  import {Encode, Decode} from 'arraybuffer-encoding/base64/standard'
   ```
 
-  Can also use `@italypaleale/arraybuffer/base64` as alias.
+  Can also use `arraybuffer-encoding/base64` as alias.
 
 - **URL-safe base64** (RFC 4648 §5): uses `-` and `_` for characters 62 and 63 respectively. Encoded strings are never padded by the `Encode` function.  
   Import with:  
 
   ```js
-  import {Encode, Decode} from '@italypaleale/arraybuffer/base64/url'
+  import {Encode, Decode} from 'arraybuffer-encoding/base64/url'
   ```
 
 > In all cases, the `Decode` function accepts strings with or without padding.
@@ -44,7 +44,7 @@ This package offers support for encoding and decoding base64 in two variants:
 To encode an ArrayBuffer to base64, use the `Encode(ab: ArrayBuffer): string` method:
 
 ```js
-import {Encode} from '@italypaleale/arraybuffer/base64'
+import {Encode} from 'arraybuffer-encoding/base64'
 const ab = new ArrayBuffer(...)
 const encoded = Encode(ab)
 ```
@@ -52,7 +52,7 @@ const encoded = Encode(ab)
 Typed arrays, such as Uint8Array objects, can be passed as well:
 
 ```js
-import {Encode} from '@italypaleale/arraybuffer/base64'
+import {Encode} from 'arraybuffer-encoding/base64'
 const array = new Uint8Array(...)
 const encoded = Encode(ab)
 ```
@@ -60,7 +60,7 @@ const encoded = Encode(ab)
 To encode a UTF-8 string, convert it to a typed array object first:
 
 ```js
-import {Encode} from '@italypaleale/arraybuffer/base64'
+import {Encode} from 'arraybuffer-encoding/base64'
 const str = 'Hello world'
 const textEnc = new TextEncoder()
 const encoded = Encode(textEnc.encode(str))
@@ -71,7 +71,7 @@ const encoded = Encode(textEnc.encode(str))
 To decode a base64-encoded string, use the `Decode(str: string): ArrayBuffer` method, which returns an ArrayBuffer object:
 
 ```js
-import {Decode} from '@italypaleale/arraybuffer/base64'
+import {Decode} from 'arraybuffer-encoding/base64'
 const encoded = 'RGV2cw'
 const ab = Decode(encoded)
 ```
@@ -79,7 +79,7 @@ const ab = Decode(encoded)
 The decoded ArrayBuffer can be converted to a string (for example, UTF-8 encoded) with:
 
 ```js
-import {Decode} from '@italypaleale/arraybuffer/base64'
+import {Decode} from 'arraybuffer-encoding/base64'
 const encoded = 'RGV2cw'
 const ab = Decode(encoded)
 const textDecoder = new TextDecoder('utf-8')
@@ -88,10 +88,10 @@ const str = textDecoder.decode(ab)
 
 ### Custom base64 charset
 
-If needed, you can define your own base64 charset by using the `Encoding` class in `@italypaleale/arraybuffer/base64/encoding`:
+If needed, you can define your own base64 charset by using the `Encoding` class in `arraybuffer-encoding/base64/encoding`:
 
 ```js
-import {Encoding} from '@italypaleale/arraybuffer/base64/encoding'
+import {Encoding} from 'arraybuffer-encoding/base64/encoding'
 const base64 = new Encoding(charset, noPadding)
 ```
 
@@ -110,7 +110,7 @@ The object contains two methods:
 To import the hex encoding and decoding utilities, use:
 
 ```js
-import {Encode, Decode} from '@italypaleale/arraybuffer/hex'
+import {Encode, Decode} from 'arraybuffer-encoding/hex'
 ```
 
 ### Encoding to hex
@@ -118,7 +118,7 @@ import {Encode, Decode} from '@italypaleale/arraybuffer/hex'
 To encode an ArrayBuffer to hex, use the `Encode(ab: ArrayBuffer): string` method:
 
 ```js
-import {Encode} from '@italypaleale/arraybuffer/hex'
+import {Encode} from 'arraybuffer-encoding/hex'
 const ab = new ArrayBuffer(...)
 const encoded = Encode(ab)
 ```
@@ -126,7 +126,7 @@ const encoded = Encode(ab)
 Typed arrays, such as Uint8Array objects, can be passed as well:
 
 ```js
-import {Encode} from '@italypaleale/arraybuffer/hex'
+import {Encode} from 'arraybuffer-encoding/hex'
 const array = new Uint8Array(...)
 const encoded = Encode(ab)
 ```
@@ -134,7 +134,7 @@ const encoded = Encode(ab)
 To encode a UTF-8 string, convert it to a typed array object first:
 
 ```js
-import {Encode} from '@italypaleale/arraybuffer/hex'
+import {Encode} from 'arraybuffer-encoding/hex'
 const str = 'Hello world'
 const textEnc = new TextEncoder()
 const encoded = Encode(textEnc.encode(str))
@@ -145,7 +145,7 @@ const encoded = Encode(textEnc.encode(str))
 To decode a hex-encoded string, use the `Decode(str: string): ArrayBuffer` method, which returns an ArrayBuffer object:
 
 ```js
-import {Decode} from '@italypaleale/arraybuffer/hex'
+import {Decode} from 'arraybuffer-encoding/hex'
 const encoded = '54686520717569636b2062726f776e20f09fa68a206a756d7073206f766572203133206c617a7920f09f90b62e'
 const ab = Decode(encoded)
 ```
@@ -153,7 +153,7 @@ const ab = Decode(encoded)
 The decoded ArrayBuffer can be converted to a string (for example, UTF-8 encoded) with:
 
 ```js
-import {Decode} from '@italypaleale/arraybuffer/hex'
+import {Decode} from 'arraybuffer-encoding/hex'
 const encoded = '54686520717569636b2062726f776e20f09fa68a206a756d7073206f766572203133206c617a7920f09f90b62e'
 const ab = Decode(encoded)
 const textDecoder = new TextDecoder('utf-8')
