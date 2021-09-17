@@ -13,6 +13,9 @@ export class Encoding {
      * @param noPadding If true, encoded strings won't include padding.
      */
     constructor(charset: string, noPadding?: boolean) {
+        if (!charset || charset.length != 64) {
+            throw Error('Charset must contain 64 characters')
+        }
         this._charset = charset
         this._noPadding = !!noPadding
         this._valid = new RegExp('^[' + this._charset.replace('-', '\\-') + ']+={0,2}$')
