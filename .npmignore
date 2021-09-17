@@ -7,6 +7,10 @@ test
 coverage
 .nyc_output
 src
+typedoc.json
 tsconfig.json
 tslint.json
 .jsdoc.json
+.github
+.nycrc*
+*.tgz
