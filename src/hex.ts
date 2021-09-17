@@ -1,3 +1,7 @@
+/**
+ * This module provides utilities to encode and decode hex strings.
+ * @module hex
+ */
 // Lookup table
 const hexLookupTable = [
     '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '0a', '0b', '0c', '0d', '0e', '0f',

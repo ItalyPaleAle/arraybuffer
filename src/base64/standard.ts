@@ -1,3 +1,8 @@
+/**
+ * This module provides utilities to encode and decode base64 using the "standard" encoding, where characters 63 and 64 are `+` and `/` respectively. The `Encode` function appends padding `=` characters at the end of the encoded string, if required (with `Decode`, padding is always optional).
+ * @module base64/standard
+ */
+
 import {Encoding} from './encoding'
 
 const obj = new Encoding('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/')

@@ -24,7 +24,6 @@
         "object-literal-shorthand": [true, "never"],
         "interface-name": [true, "never-prefix"],
         "jsdoc-format": true,
-        "no-redundant-jsdoc": true,
         "no-namespace": false,
         "new-parens": true,
         "only-arrow-functions": false,

@@ -2,7 +2,10 @@
     "name": "arraybuffer-encoding-encode",
     "readme": "README.md",
     "out": "docs",
+    "includeVersion": true,
+    "cleanOutputDir": true,
     "entryPoints": [
-        "src/index.ts"
-    ]
+        "src/"
+    ],
+    "entryPointStrategy": "expand"
 }

@@ -1,6 +1,7 @@
 /**
  * Base64 encoding and decoding with a given charset and optional padding.
  * This class can be used to create base64 encoders and decoders with custom charsets.
+ * @module base64/encoding
  */
 export class Encoding {
     private _charset: string

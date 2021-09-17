@@ -1,3 +1,8 @@
+/**
+ * This module exports the @base64 and @hex modules and it's the one used when importing the package with `import 'arraybuffer-encoding'`. You should consider using one of the submodules instead, such as `import 'arraybuffer-encoding/hex'` or `import 'arraybuffer-encoding/base64'`
+ * @module
+ */
+
 /* tslint:disable:variable-name */
 
 import {
