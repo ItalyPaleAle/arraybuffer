@@ -1,7 +1,7 @@
 {
-  "name": "@italypaleale/arraybuffer-encode",
+  "name": "@italypaleale/arraybuffer",
   "version": "1.0.0",
-  "description": "Encode ArrayBuffer to base64 and hex in the browser",
+  "description": "ArrayBuffer to base64 and hex encoding/decoding utilities",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "directories": {
@@ -35,7 +35,9 @@
     "url": "git+https://github.com/ItalyPaleAle/arraybuffer-encode.git"
   },
   "keywords": [
-    "arraybuffer"
+    "arraybuffer",
+    "hex",
+    "base64"
   ],
   "author": "Alessandro Segala (@ItalyPaleAle)",
   "license": "MIT",
