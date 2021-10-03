@@ -3,7 +3,7 @@
  * @module base64/standard
  */
 
-import {Encoding} from './encoding'
+import {Encoding} from './encoding.js'
 
 const obj = new Encoding('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/')
 

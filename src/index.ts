@@ -8,11 +8,11 @@
 import {
     Decode as Base64Decode,
     Encode as Base64Encode
-} from './base64'
+} from './base64/index.js'
 import {
     Decode as HexDecode,
     Encode as HexEncode
-} from './hex'
+} from './hex.js'
 
 /** Base64 encoding and decoding utilities */
 export const Base64 = {

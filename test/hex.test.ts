@@ -1,7 +1,6 @@
 import 'mocha'
-import 'should'
 import assert from 'assert'
-import {Encode, Decode} from '../src/hex'
+import {Encode, Decode} from '../src/hex.js'
 
 // Test vectors from RFC 4648: https://datatracker.ietf.org/doc/html/rfc4648#section-10
 const tests: Record<string,string> = {

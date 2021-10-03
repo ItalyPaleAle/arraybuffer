@@ -1,17 +1,14 @@
 {
     "compilerOptions": {
         "alwaysStrict": true,
-        "target": "es2018",
-        "module": "commonjs",
-        "esModuleInterop": true,
+        "target": "ES2020",
+        "declarationDir": "dist/types/",
         "allowSyntheticDefaultImports": true,
-        "moduleResolution": "node",
-        "outDir": "./dist",
         "listFiles": false,
-        "sourceMap": false,
+        "sourceMap": true,
         "declaration": true,
         "lib": [
-            "ES2018",
+            "ES2020",
             "DOM"
         ],
         "strict": true,

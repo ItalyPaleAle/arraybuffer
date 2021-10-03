@@ -1,9 +1,7 @@
-import 'mocha'
-import 'should'
-import assert from 'assert'
-import * as Base64 from '../src/base64'
-import * as Base64Std from '../src/base64/standard'
-import * as Base64Url from '../src/base64/url'
+import * as assert from 'assert'
+import * as Base64 from '../src/base64/index.js'
+import * as Base64Std from '../src/base64/standard.js'
+import * as Base64Url from '../src/base64/url.js'
 
 function typedArraysEqual(a: Uint8Array, b: Uint8Array) {
     if (a.byteLength != b.byteLength) {

@@ -5,8 +5,8 @@
 
 /* tslint:disable:variable-name */
 
-import {Encode as EncodeStandard, Decode as DecodeStandard} from './standard'
-import {Encode as EncodeUrl, Decode as DecodeUrl} from './url'
+import {Encode as EncodeStandard, Decode as DecodeStandard} from './standard.js'
+import {Encode as EncodeUrl, Decode as DecodeUrl} from './url.js'
 
 export const Standard = {
     Encode: EncodeStandard,
