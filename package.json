@@ -2,7 +2,7 @@
   "name": "arraybuffer-encoding",
   "version": "1.0.2",
   "description": "ArrayBuffer to base64 and hex encoding/decoding utilities",
-  "main": "dist/commonjs/index.js",
+  "main": "dist/cjs/index.js",
   "types": "dist/types/index.d.ts",
   "type": "module",
   "directories": {
@@ -11,23 +11,23 @@
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
-      "require": "./dist/commonjs/index.js",
-      "types": "./dist/types/index.js"
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
     },
     "./hex": {
       "import": "./dist/esm/hex.js",
-      "require": "./dist/commonjs/hex.js",
-      "types": "./dist/types/hex.js"
+      "require": "./dist/cjs/hex.js",
+      "types": "./dist/types/hex.d.ts"
     },
     "./base64": {
       "import": "./dist/esm/base64/index.js",
-      "require": "./dist/commonjs/base64/index.js",
-      "types": "./dist/types/base64/index.js"
+      "require": "./dist/cjs/base64/index.js",
+      "types": "./dist/types/base64/index.d.ts"
     },
     "./base64/*": {
       "import": "./dist/esm/base64/*.js",
-      "require": "./dist/commonjs/base64/*.js",
-      "types": "./dist/types/base64/*.js"
+      "require": "./dist/cjs/base64/*.js",
+      "types": "./dist/types/base64/*.d.ts"
     }
   },
   "scripts": {
