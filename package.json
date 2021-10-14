@@ -30,6 +30,14 @@
       "types": "./dist/types/base64/*.d.ts"
     }
   },
+  "typesVersions": {
+    "*": {
+      "*": ["dist/types/index.d.ts"],
+      "hex": ["./dist/types/hex.d.ts"],
+      "base64": ["./dist/types/base64/index.d.ts"],
+      "base64/*": ["./dist/types/base64/*.d.ts"]
+    }
+  },
   "scripts": {
     "build": "npm run tsc",
     "docs": "npm run typedoc",
