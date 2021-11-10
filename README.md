@@ -1,4 +1,4 @@
-![npm](https://img.shields.io/npm/v/arraybuffer-encoding) [![Node.js CI](https://github.com/ItalyPaleAle/arraybuffer/actions/workflows/node.js.yaml/badge.svg)](https://github.com/ItalyPaleAle/arraybuffer/actions/workflows/node.js.yaml) ![License: MIT](https://img.shields.io/github/license/ItalyPaleAle/arraybuffer)
+[![npm](https://img.shields.io/npm/v/arraybuffer-encoding)](https://www.npmjs.com/package/arraybuffer-encoding) [![Node.js CI](https://github.com/ItalyPaleAle/arraybuffer/actions/workflows/node.js.yaml/badge.svg)](https://github.com/ItalyPaleAle/arraybuffer/actions/workflows/node.js.yaml) ![License: MIT](https://img.shields.io/github/license/ItalyPaleAle/arraybuffer)
 
 # ArrayBuffer encoding and decoding tools
 
@@ -13,7 +13,7 @@ Full API documentation available at [https://italypaleale.github.io/arraybuffer/
 
 ## Installation
 
-Install from NPM:
+Install [from NPM](https://www.npmjs.com/package/arraybuffer-encoding):
 
 ```sh
 npm i arraybuffer-encoding
