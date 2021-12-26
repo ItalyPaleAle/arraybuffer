@@ -23,20 +23,37 @@ describe('Base64', () => {
         {str: 'foobar', enc: 'Zm9vYmFy'},
     ]
 
+    // Additional test vectors for decoding only
+    const testsDecode = [
+        // Add whitspaces to encoded text
+        {str: 'fooba', enc: 'Zm9vYm E='},
+        {str: 'fooba', enc: '  Zm9vYmE='},
+        {str: 'fooba', enc: '  \nZm9vYmE='},
+        {str: 'fooba', enc: 'Zm9vYm\tE='},
+        {str: 'foobar', enc: 'Zm9v Ym Fy'},
+        {str: 'foobar', enc: 'Zm9v\nYm\nFy'},
+        {str: 'foobar', enc: 'Zm9v\nYm\r\nFy'},
+        {str: 'foobar', enc: 'Zm9v\nYm\r\n Fy'},
+        {str: 'foobar', enc: ' Zm9v\nYm\r\n Fy '},
+        {str: 'foobar', enc: '   Zm9v\nYm\r\n Fy\n'},
+    ]
+
     it('Decode', () => {
         const decoder = new TextDecoder('utf-8')
 
+        const allTests = [...tests, ...testsDecode]
+
         // Tests with padding
-        for (let i = 0; i < tests.length; i++) {
-            const test = tests[i]
+        for (let i = 0; i < allTests.length; i++) {
+            const test = allTests[i]
             const dec = Base64.Decode(test.enc)
             assert.strictEqual(dec.byteLength, test.str.length, `Length doesn't match for test ${i}`)
             assert.strictEqual(decoder.decode(dec), test.str, `Result doesn't match for test ${i}`)
         }
 
         // Repeat tests without padding
-        for (let i = 0; i < tests.length; i++) {
-            const test = tests[i]
+        for (let i = 0; i < allTests.length; i++) {
+            const test = allTests[i]
             let enc = test.enc
             while (enc.length && enc.charAt(enc.length - 1) == '=') {
                 enc = enc.slice(0, -1)

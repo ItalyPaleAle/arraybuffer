@@ -43,6 +43,10 @@ export function Encode(ab: ArrayBuffer): string {
  * @returns Data decoded from the hex string
  */
 export function Decode(str: string): ArrayBuffer {
+    // Remove whitespaces
+    str = str.replace(/[\s]/g, '')
+
+    // Decode to a buffer
     const len = str.length
     if ((len % 2) != 0) {
         throw Error('Length of string must be a multiple of 2')

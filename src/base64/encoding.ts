@@ -63,6 +63,10 @@ export class Encoding {
      * @returns Data decoded from the base64 string
      */
     Decode(str: string): ArrayBuffer {
+        // Remove whitespaces
+        str = str.replace(/[\s]/g, '')
+
+        // Decode to a buffer
         if (!str) {
             return new ArrayBuffer(0)
         }

@@ -3,27 +3,39 @@ import assert from 'assert'
 import {Encode, Decode} from '../src/hex.js'
 
 // Test vectors from RFC 4648: https://datatracker.ietf.org/doc/html/rfc4648#section-10
-const tests: Record<string,string> = {
-    '': '',
-    f: '66',
-    fo: '666f',
-    foo: '666f6f',
-    foob: '666f6f62',
-    fooba: '666f6f6261',
-    foobar: '666f6f626172',
-}
+const tests = [
+    {str: '', enc: ''},
+    {str: 'f', enc: '66'},
+    {str: 'fo', enc: '666f'},
+    {str: 'foo', enc: '666f6f'},
+    {str: 'foob', enc: '666f6f62'},
+    {str: 'fooba', enc: '666f6f6261'},
+    {str: 'foobar', enc: '666f6f626172'},
+]
+
+// Additional test vectors for decoding only
+const testsDecode = [
+    // Add whitspaces to encoded text
+    {str: 'fooba', enc: '666f6f6261 '},
+    {str: 'foobar', enc: '66 6f 6f 62 61 72'},
+    {str: 'foobar', enc: '66 6f 6f\t62\n61\n72'},
+    {str: 'foobar', enc: '66 6f  6f\t62\n61\n72'},
+    {str: 'foobar', enc: '  66 6f  6f\t62\n61\n72 '},
+]
+
 
 describe('Hex', () => {
 
     it('Decode', () => {
         const decoder = new TextDecoder('utf-8')
-        for (const k in tests) {
-            if (!Object.hasOwnProperty.call(tests, k)) {
-                continue
-            }
-            const dec = Decode(tests[k])
-            assert.strictEqual(dec.byteLength, k.length, `Length doesn't match for test ${k}`)
-            assert.strictEqual(decoder.decode(dec), k, `Result doesn't match for test ${k}`)
+
+        const allTests = [...tests, ...testsDecode]
+
+        for (let i = 0; i < allTests.length; i++) {
+            const test = allTests[i]
+            const dec = Decode(test.enc)
+            assert.strictEqual(dec.byteLength, test.str.length, `Length doesn't match for test ${i}`)
+            assert.strictEqual(decoder.decode(dec), test.str, `Result doesn't match for test ${i}`)
         }
 
         // Error cases
@@ -34,13 +46,11 @@ describe('Hex', () => {
 
     it('Encode', () => {
         const encoder = new TextEncoder()
-        for (const k in tests) {
-            if (!Object.hasOwnProperty.call(tests, k)) {
-                continue
-            }
-            const enc = Encode(encoder.encode(k))
-            assert.strictEqual(enc.length, tests[k].length, `Length doesn't match for test ${k}`)
-            assert.strictEqual(enc, tests[k], `Result doesn't match for test ${k}`)
+        for (let i = 0; i < tests.length; i++) {
+            const test = tests[i]
+            const enc = Encode(encoder.encode(test.str))
+            assert.strictEqual(enc.length, test.enc.length, `Length doesn't match for test ${i}`)
+            assert.strictEqual(enc, test.enc, `Result doesn't match for test ${i}`)
         }
     })
 
