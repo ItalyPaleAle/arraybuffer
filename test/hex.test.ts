@@ -42,6 +42,9 @@ describe('Hex', () => {
         assert.throws(() => {
             Decode('0')
         }, Error('Length of string must be a multiple of 2'))
+        assert.throws(() => {
+            Decode('0Z')
+        }, Error('Invalid hex input sequence'))
     })
 
     it('Encode', () => {

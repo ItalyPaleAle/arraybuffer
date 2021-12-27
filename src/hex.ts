@@ -2,6 +2,7 @@
  * This module provides utilities to encode and decode hex strings.
  * @module hex
  */
+
 // Lookup table
 const hexLookupTable = [
     '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '0a', '0b', '0c', '0d', '0e', '0f',
@@ -21,6 +22,9 @@ const hexLookupTable = [
     'e0', 'e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8', 'e9', 'ea', 'eb', 'ec', 'ed', 'ee', 'ef',
     'f0', 'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'fa', 'fb', 'fc', 'fd', 'fe', 'ff'
 ]
+
+// Validator regular expression
+const validHex = /^[0-9A-Fa-f]+$/
 
 /**
  * Encode an ArrayBuffer to hex in a string.
@@ -44,12 +48,18 @@ export function Encode(ab: ArrayBuffer): string {
  */
 export function Decode(str: string): ArrayBuffer {
     // Remove whitespaces
-    str = str.replace(/[\s]/g, '')
+    str = (str || '').replace(/[\s]/g, '')
 
     // Decode to a buffer
     const len = str.length
+    if (!len) {
+        return new ArrayBuffer(0)
+    }
     if ((len % 2) != 0) {
         throw Error('Length of string must be a multiple of 2')
+    }
+    if (!validHex.test(str)) {
+        throw Error('Invalid hex input sequence')
     }
 
     const view = new Uint8Array(len / 2)
