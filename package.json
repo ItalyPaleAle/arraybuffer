@@ -1,6 +1,6 @@
 {
   "name": "arraybuffer-encoding",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "ArrayBuffer to base64 and hex encoding/decoding utilities",
   "main": "dist/cjs/index.js",
   "types": "dist/types/index.d.ts",
