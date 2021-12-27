@@ -15,6 +15,9 @@ const tests = [
 
 // Additional test vectors for decoding only
 const testsDecode = [
+    // Mixed-case
+    {str: 'fooba', enc: '666F6F6261'},
+    {str: 'fooba', enc: '666F6f6261'},
     // Add whitspaces to encoded text
     {str: 'fooba', enc: '666f6f6261 '},
     {str: 'foobar', enc: '66 6f 6f 62 61 72'},
